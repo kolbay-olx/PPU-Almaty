@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Утепление крыши ППУ в Алматы | TEPLO DOM</title>
+<meta name="description" content="Напыление пенополиуретана для крыш, чердаков и мансард частных домов в Алматы. Подберём толщину слоя и рассчитаем стоимость. WhatsApp и звонок: +7 702 642 70 26.">
+<meta name="theme-color" content="#F4F2FF">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Inter+Tight:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#FFFFFF; --bg2:#F6F4FF; --line:#E6E3F7; --line2:#D2CDF0;
+  --navy:#0B1033; --muted:#4C5280; --blue:#2F3FD8; --violet:#7B5CFF; --lav:#C9B8FF;
+  --brand:linear-gradient(90deg,#2F3FD8,#7B5CFF);
+  --shadow:0 1px 2px rgba(11,16,51,.04),0 24px 50px -32px rgba(47,63,216,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--navy);font:400 16px/1.6 "Inter Tight",system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+h1,h2,h3{margin:0;font-family:Montserrat,system-ui,sans-serif;font-weight:600;letter-spacing:-.025em;line-height:1.12}
+.wrap{max-width:1280px;margin:0 auto;padding:0 40px}
+:focus-visible{outline:3px solid var(--violet);outline-offset:3px;border-radius:10px}
+.grad{background:var(--brand);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* Кнопки */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border-radius:14px;font:600 16px/1 "Inter Tight",system-ui,sans-serif;text-decoration:none;cursor:pointer;border:1px solid transparent;transition:box-shadow .25s,transform .2s,background-color .2s,border-color .2s}
+.btn-primary{background:linear-gradient(90deg,#2F3FD8,#5446E6);color:#fff;box-shadow:0 12px 28px -12px rgba(47,63,216,.7)}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 18px 34px -12px rgba(84,70,230,.75)}
+.btn-primary:active{transform:none}
+.btn-light{background:#fff;color:var(--navy);border-color:var(--line2)}
+.btn-light:hover{border-color:var(--violet)}
+.btn-sm{min-height:44px;padding:0 18px;font-size:15px;border-radius:12px}
+.btn[disabled]{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
+
+/* Шапка */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{display:flex;align-items:center;gap:10px;font:700 20px Montserrat,sans-serif;letter-spacing:-.02em;text-decoration:none}
+.logo-mark{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:var(--brand)}
+.nav{display:flex;gap:30px}
+.nav a{font-size:15px;color:var(--muted);text-decoration:none;font-weight:500}
+.nav a:hover{color:var(--blue)}
+.bar-right{display:flex;align-items:center;gap:16px}
+.phone{font-size:15px;font-weight:600;text-decoration:none;white-space:nowrap}
+.phone:hover{color:var(--blue)}
+.burger{display:none;width:46px;height:46px;border-radius:12px;border:1px solid var(--line2);background:#fff;color:var(--navy);cursor:pointer;align-items:center;justify-content:center}
+.mnav{display:none;padding:8px 20px 20px;border-top:1px solid var(--line);background:#fff}
+.mnav.open{display:block}
+.mnav a{display:flex;align-items:center;min-height:52px;font-size:18px;font-weight:600;text-decoration:none;border-bottom:1px solid var(--line)}
+.mnav .btn{width:100%;margin-top:16px}
+
+/* Первый экран: светлый фон с лавандовым переливом и 3D-лентой */
+.hero{position:relative;overflow:hidden;background:radial-gradient(900px 640px at 95% 30%,rgba(201,184,255,.55),transparent 62%),radial-gradient(700px 520px at 70% 100%,rgba(123,92,255,.18),transparent 65%),linear-gradient(115deg,#FFFFFF 0%,#F7F5FF 45%,#EEE9FF 100%)}
+.hero-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:center;min-height:calc(100vh - 76px);max-height:900px}
+.hero-text{position:relative;z-index:2;padding:72px 0 72px 40px;max-width:640px;justify-self:end;width:100%}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;border:1px solid var(--line2);background:rgba(255,255,255,.7);font-size:14px;font-weight:500;color:var(--muted)}
+.chip b{width:8px;height:8px;border-radius:50%;background:var(--brand)}
+.hero h1{font-size:68px;line-height:1.04;margin:24px 0 22px}
+.lead{font-size:19px;color:var(--muted);max-width:540px;margin:0}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hint{display:flex;align-items:center;gap:10px;margin:22px 0 0;font-size:15px;color:var(--muted)}
+.stage{position:relative;height:100%;min-height:560px;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 26%),linear-gradient(to bottom,transparent 0,#000 14%,#000 86%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent 0,#000 26%),linear-gradient(to bottom,transparent 0,#000 14%,#000 86%,transparent 100%);mask-composite:intersect}
+.stage canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+/* Запасной вид без WebGL — мягкая лавандовая волна */
+.fallback{position:absolute;inset:10% 0 10% 10%;border-radius:50%;background:linear-gradient(135deg,#7E8CFF,#B6A2FF 45%,#E7DEFF);filter:blur(50px);opacity:.75;transform:rotate(-25deg);transition:opacity .6s}
+.stage.ready .fallback{opacity:0}
+
+/* Секции */
+.sec{padding:120px 0}
+.sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:48px}
+.sec h2{font-size:44px}
+.sub{color:var(--muted);font-size:17px;max-width:460px;margin:0}
+.eyebrow{display:block;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+.eyebrow span{background:var(--brand);-webkit-background-clip:text;background-clip:text;color:transparent}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.tint{background:linear-gradient(180deg,#F7F5FF,#FFFFFF)}
+
+/* Карточки */
+.card{position:relative;border-radius:22px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);padding:32px;transition:transform .3s,box-shadow .3s}
+.card::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:linear-gradient(135deg,#2F3FD8,#7B5CFF,#C9B8FF);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .3s;pointer-events:none}
+.card:hover{transform:translateY(-3px);box-shadow:0 30px 60px -34px rgba(47,63,216,.45)}
+.card:hover::before{opacity:1}
+.card h3{font-size:20px;line-height:1.3}
+.card p{color:var(--muted);margin:10px 0 0}
+.ico{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;margin-bottom:20px;background:linear-gradient(135deg,#ECEBFF,#F4EEFF);color:var(--blue)}
+
+.ph{position:relative;background:linear-gradient(140deg,#E9E6FF,#F6F3FF 55%,#ECE4FF);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:14px;font-weight:500}
+.svc{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.svc .ph{height:230px;border-bottom:1px solid var(--line)}
+.svc-body{padding:28px;display:flex;flex-direction:column;flex:1}
+.svc-body p{flex:1}
+.more{display:inline-flex;align-items:center;gap:8px;margin-top:18px;min-height:44px;font-weight:600;color:var(--blue);text-decoration:none}
+.more:hover{color:var(--violet)}
+
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;list-style:none;margin:0;padding:0}
+.num{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;margin-bottom:18px;font:600 17px Montserrat,sans-serif;background:#EEEDFF;color:var(--blue)}
+.num.last{background:var(--brand);color:#fff}
+.steps h3{font-size:18px}
+.steps p{font-size:15px}
+
+.work{padding:0;overflow:hidden}
+.work .ph{height:280px;border-bottom:1px solid var(--line)}
+.work dl{margin:0;padding:24px 28px 28px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 20px}
+.work dt{font-size:13px;color:var(--muted)}
+.work dd{margin:3px 0 0;font-weight:600}
+
+/* Стоимость */
+.price{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.tags{list-style:none;margin:26px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.tags li{padding:9px 16px;border-radius:999px;border:1px solid var(--line2);background:#fff;font-size:15px;font-weight:500}
+form.card{padding:36px;display:flex;flex-direction:column;gap:18px}
+form.card:hover{transform:none}
+.lbl{display:flex;flex-direction:column;gap:8px;font-size:14px;font-weight:600}
+.field{width:100%;min-height:54px;padding:0 16px;border-radius:12px;border:1px solid var(--line2);background:#fff;color:var(--navy);font:500 16px "Inter Tight",system-ui,sans-serif;transition:border-color .2s,box-shadow .2s}
+.field::placeholder{color:#8A8FB5}
+.field:hover{border-color:#B3ACE6}
+.field:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(47,63,216,.14)}
+.field.err{border-color:#C62828;box-shadow:0 0 0 4px rgba(198,40,40,.1)}
+.err-msg{font-size:13px;color:#B71C1C;margin:-8px 0 0}
+.consent{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--muted);min-height:44px}
+.consent input{width:22px;height:22px;margin:0;flex:none;accent-color:var(--blue)}
+.consent a{color:var(--blue)}
+.note{font-size:14px;color:var(--muted);margin:0}
+.note.ok{color:#1B5E20}
+
+/* FAQ */
+.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.faq-list{display:flex;flex-direction:column;gap:12px}
+details{border-radius:16px;border:1px solid var(--line);background:#fff;transition:border-color .25s,box-shadow .25s}
+details:hover{border-color:var(--line2)}
+details[open]{border-color:var(--line2);box-shadow:var(--shadow)}
+summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:22px 24px;min-height:66px}
+summary::-webkit-details-marker{display:none}
+summary h3{font-size:17px;font-weight:600}
+.plus{width:36px;height:36px;flex:none;border-radius:50%;display:grid;place-items:center;background:#EEEDFF;color:var(--blue);transition:transform .25s,background-color .25s}
+details[open] .plus{transform:rotate(45deg);background:var(--brand);color:#fff}
+details p{margin:0;padding:0 24px 24px;color:var(--muted)}
+
+/* Финальный призыв — тёмная плитка палитры */
+.final{position:relative;border-radius:28px;padding:72px;overflow:hidden;background:radial-gradient(80% 120% at 100% 0%,rgba(123,92,255,.55),transparent 55%),radial-gradient(70% 90% at 0% 100%,rgba(47,63,216,.5),transparent 60%),#0B1033;color:#fff;display:grid;grid-template-columns:1.3fr auto;gap:40px;align-items:center}
+.final h2{font-size:42px;color:#fff}
+.final p{color:#C9CDF2;font-size:18px;margin:18px 0 0;max-width:640px}
+.contacts-row{display:flex;flex-wrap:wrap;gap:40px;margin-top:28px}
+.contacts-row small{display:block;font-size:13px;color:#A9AEDC}
+.contacts-row a,.contacts-row strong{display:inline-block;margin-top:4px;font:700 24px Montserrat,sans-serif;text-decoration:none;color:#fff}
+.final .btn-light{border:0}
+
+footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+.mbar{display:none}
+
+@media (max-width:1024px){
+  .nav,.phone,.bar-right .btn{display:none}
+  .burger{display:flex}
+  .hero-grid{grid-template-columns:1fr;min-height:0;max-height:none}
+  .hero-text{justify-self:stretch;max-width:none;padding:48px 40px 0}
+  .stage{height:440px;min-height:0}
+  .hero h1{font-size:56px}
+  .grid3,.price,.faq,.final{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .bar{height:68px}
+  .hero-text{padding:28px 16px 0}
+  .hero h1{font-size:36px;margin:18px 0 16px}
+  .lead{font-size:17px}
+  .cta{flex-direction:column}
+  .cta .btn{width:100%}
+  .stage{height:330px}
+  .sec{padding:64px 0}
+  .sec h2,.final h2{font-size:28px}
+  .sec-head{margin-bottom:28px}
+  .steps{grid-template-columns:1fr}
+  .card{padding:24px}
+  form.card{padding:24px}
+  .final{padding:32px 22px;border-radius:22px}
+  .final .btn{width:100%}
+  .contacts-row a,.contacts-row strong{font-size:21px}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px calc(12px + env(safe-area-inset-bottom));background:rgba(255,255,255,.95);backdrop-filter:blur(14px);border-top:1px solid var(--line)}
+  .mbar .btn{min-height:52px;width:100%}
+  footer{padding-bottom:110px}
+}
+</style>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="TEPLO DOM — на главную">
+      <span class="logo-mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12 12 4l9 8"/><path d="M6 11v9h12v-9"/></svg></span>
+      TEPLO DOM
+    </a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="#services">Услуги</a><a href="#works">Работы</a><a href="#price">Стоимость</a><a href="#faq">Вопросы</a><a href="#contacts">Контакты</a>
+    </nav>
+    <div class="bar-right">
+      <a class="phone" href="tel:+77026427026">+7 702 642 70 26</a>
+      <a class="btn btn-primary btn-sm" href="https://wa.me/77026427026?text=Здравствуйте! Хочу рассчитать стоимость утепления крыши ППУ" target="_blank" rel="noopener">Написать в WhatsApp</a>
+      <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mnav">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Мобильное меню">
+    <a href="#services">Услуги</a><a href="#works">Работы</a><a href="#price">Стоимость</a><a href="#faq">Вопросы</a><a href="#contacts">Контакты</a>
+    <a class="btn btn-primary" href="https://wa.me/77026427026?text=Здравствуйте! Хочу рассчитать стоимость утепления крыши ППУ" target="_blank" rel="noopener">Написать в WhatsApp</a>
+  </nav>
+</header>
+
+<main id="top">
+  <!-- Первый экран -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <span class="chip"><b></b>Алматы · частные дома</span>
+        <h1 id="hero-title">Утепление крыши <span class="grad">ППУ</span> в&nbsp;Алматы</h1>
+        <p class="lead">Напыление пенополиуретана для крыш и чердаков частных домов. Подберём толщину слоя под вашу конструкцию и рассчитаем стоимость работ.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#price">Рассчитать стоимость</a>
+          <a class="btn btn-light" href="https://wa.me/77026427026?text=Здравствуйте! Хочу обсудить утепление крыши ППУ" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#16A34A" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.1 5 5 0 0 0 1 2.6 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3Z"/></svg>
+            Обсудить в WhatsApp
+          </a>
+        </div>
+        <p class="hint"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2F3FD8" stroke-width="1.8" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Отправьте фото крыши и площадь — уточним детали для расчёта.</p>
+      </div>
+      <div class="stage" id="stage" aria-hidden="true">
+        <div class="fallback"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Задачи -->
+  <section class="sec" id="tasks">
+    <div class="wrap">
+      <span class="eyebrow"><span>Зачем</span></span>
+      <h2 style="max-width:720px;margin-bottom:44px">Что даёт напыление <span class="grad">пенополиуретана</span></h2>
+      <div class="grid3">
+        <article class="card"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg></span><h3>Снизить потери тепла через крышу</h3><p>Слой пены закрывает пространство между стропилами и помогает удерживать тепло в доме.</p></article>
+        <article class="card"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20 9 8l4 6 3-4 5 10z"/></svg></span><h3>Утеплить участки сложной формы</h3><p>Напыление повторяет форму скатов мансарды, примыканий и труднодоступных узлов.</p></article>
+        <article class="card"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 12h18"/></svg></span><h3>Создать сплошной слой утеплителя</h3><p>Пенополиуретан наносится без стыков между плитами, через которые часто уходит тепло.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Услуги -->
+  <section class="sec tint" id="services">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="eyebrow"><span>Услуги</span></span><h2>Что мы утепляем</h2></div><p class="sub">Утепление крыши, чердака и мансарды напылением ППУ — под вашу конструкцию.</p></div>
+      <div class="grid3">
+        <article class="card svc"><div class="ph" role="img" aria-label="Место для фото: утепление крыши ППУ">Фото: крыша</div><div class="svc-body"><h3>Утепление крыши ППУ</h3><p>Напыление на скаты изнутри — между стропилами и по настилу.</p><a class="more" href="#price">Узнать стоимость →</a></div></article>
+        <article class="card svc"><div class="ph" role="img" aria-label="Место для фото: утепление чердака ППУ">Фото: чердак</div><div class="svc-body"><h3>Утепление чердака ППУ</h3><p>Чердачное перекрытие, если чердак не отапливается и тепло уходит через потолок.</p><a class="more" href="#price">Узнать стоимость →</a></div></article>
+        <article class="card svc"><div class="ph" role="img" aria-label="Место для фото: утепление мансарды ППУ">Фото: мансарда</div><div class="svc-body"><h3>Утепление мансарды ППУ</h3><p>Скаты, фронтоны и потолок мансарды — для комфортной комнаты под крышей.</p><a class="more" href="#price">Узнать стоимость →</a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Этапы -->
+  <section class="sec" id="steps">
+    <div class="wrap">
+      <span class="eyebrow"><span>Процесс</span></span>
+      <h2 style="margin-bottom:44px">Как проходит работа</h2>
+      <ol class="steps">
+        <li class="card"><span class="num">1</span><h3>Уточняем площадь и конструкцию</h3><p>По фото, размерам или после осмотра объекта.</p></li>
+        <li class="card"><span class="num">2</span><h3>Подбираем материал и толщину слоя</h3><p>С учётом конструкции крыши и ваших задач.</p></li>
+        <li class="card"><span class="num">3</span><h3>Согласовываем смету и подготовку поверхности</h3><p>Фиксируем объём работ и что сделать до начала.</p></li>
+        <li class="card"><span class="num last">4</span><h3>Выполняем напыление и проверяем результат</h3><p>Вместе с вами осматриваем готовую поверхность.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Работы -->
+  <section class="sec tint" id="works">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="eyebrow"><span>Портфолио</span></span><h2>Выполненные работы</h2></div><p class="sub">Здесь появятся фото и данные реальных объектов TEPLO DOM.</p></div>
+      <div class="grid3">
+        <article class="card work"><div class="ph" role="img" aria-label="Место для фото объекта">Фото объекта</div><dl><div><dt>Объект</dt><dd>[Тип объекта]</dd></div><div><dt>Район Алматы</dt><dd>[Район]</dd></div><div><dt>Площадь</dt><dd>[— м²]</dd></div><div><dt>Толщина слоя</dt><dd>[— мм]</dd></div></dl></article>
+        <article class="card work"><div class="ph" role="img" aria-label="Место для фото объекта">Фото объекта</div><dl><div><dt>Объект</dt><dd>[Тип объекта]</dd></div><div><dt>Район Алматы</dt><dd>[Район]</dd></div><div><dt>Площадь</dt><dd>[— м²]</dd></div><div><dt>Толщина слоя</dt><dd>[— мм]</dd></div></dl></article>
+        <article class="card work"><div class="ph" role="img" aria-label="Место для фото объекта">Фото объекта</div><dl><div><dt>Объект</dt><dd>[Тип объекта]</dd></div><div><dt>Район Алматы</dt><dd>[Район]</dd></div><div><dt>Площадь</dt><dd>[— м²]</dd></div><div><dt>Толщина слоя</dt><dd>[— мм]</dd></div></dl></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Стоимость -->
+  <section class="sec" id="price">
+    <div class="wrap price">
+      <div>
+        <span class="eyebrow"><span>Стоимость</span></span>
+        <h2>Сколько стоит утепление крыши ППУ в&nbsp;Алматы?</h2>
+        <p class="lead" style="margin-top:20px">Стоимость зависит от площади, толщины слоя, типа ППУ, состояния поверхности и сложности доступа.</p>
+        <ul class="tags"><li>Площадь</li><li>Толщина слоя</li><li>Тип ППУ</li><li>Состояние поверхности</li><li>Сложность доступа</li></ul>
+      </div>
+      <form class="card" id="calc" novalidate>
+        <h3 style="font-size:22px">Запросить расчёт</h3>
+        <label class="lbl">Что нужно утеплить?
+          <select class="field" name="object"><option>Крышу</option><option>Чердак</option><option>Мансарду</option><option>Другое</option></select>
+        </label>
+        <label class="lbl">Примерная площадь, м²
+          <input class="field" type="number" inputmode="numeric" min="1" name="area" placeholder="Например, 120">
+        </label>
+        <label class="lbl">Телефон
+          <input class="field" type="tel" name="phone" placeholder="+7 7__ ___ __ __" autocomplete="tel" aria-describedby="phone-err">
+        </label>
+        <p class="err-msg" id="phone-err" hidden>Введите номер в формате +7 7XX XXX XX XX</p>
+        <label class="consent"><input type="checkbox" name="consent"><span>Я согласен на обработку персональных данных. <a href="#consent">[Ссылка на политику конфиденциальности]</a></span></label>
+        <button class="btn btn-primary" type="submit" id="submit" disabled>Запросить расчёт</button>
+        <p class="note" id="note" aria-live="polite">Заявка откроется в WhatsApp с готовым сообщением — останется нажать «Отправить».</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Вопросы -->
+  <section class="sec tint" id="faq">
+    <div class="wrap faq">
+      <div><span class="eyebrow"><span>FAQ</span></span><h2>Вопросы и ответы</h2></div>
+      <div class="faq-list">
+        <details open><summary><h3>Какую толщину ППУ выбрать?</h3><span class="plus" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Толщина зависит от конструкции крыши, типа ППУ и задачи утепления. Предложим вариант после того, как уточним параметры объекта.</p></details>
+        <details><summary><h3>От чего зависит стоимость?</h3><span class="plus" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>От площади, толщины слоя, типа ППУ, состояния поверхности и сложности доступа. Точную сумму назовём после оценки объекта.</p></details>
+        <details><summary><h3>Как подготовить крышу к работам?</h3><span class="plus" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Обычно нужен свободный доступ к поверхности. Что потребуется на вашем объекте, расскажем при согласовании сметы.</p></details>
+        <details><summary><h3>Сколько времени занимает утепление?</h3><span class="plus" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Срок зависит от площади и сложности объекта. Ориентир назовём после оценки и согласуем дату начала работ.</p></details>
+        <details><summary><h3>Работаете ли вы в моём районе Алматы?</h3><span class="plus" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Мы работаем в Алматы. Напишите район или адрес в WhatsApp — уточним возможность выезда.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section class="sec" id="contacts">
+    <div class="wrap">
+      <div class="final">
+        <div>
+          <h2>Планируете утеплить крышу? Начните с&nbsp;расчёта</h2>
+          <p>Отправьте фото объекта и примерную площадь в WhatsApp — обсудим подходящий вариант утепления.</p>
+          <div class="contacts-row">
+            <div><small>Телефон и WhatsApp</small><a href="tel:+77026427026">+7 702 642 70 26</a></div>
+            <div><small>Регион</small><strong>Алматы</strong></div>
+          </div>
+        </div>
+        <a class="btn btn-light" href="https://wa.me/77026427026" target="_blank" rel="noopener" style="min-height:62px;padding:0 34px;font-size:17px">Отправить фото в WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 TEPLO DOM · Утепление крыши ППУ в Алматы</span><a href="tel:+77026427026" style="text-decoration:none">+7 702 642 70 26</a></div></footer>
+
+<div class="mbar">
+  <a class="btn btn-light" href="tel:+77026427026">Позвонить</a>
+  <a class="btn btn-primary" href="https://wa.me/77026427026?text=Здравствуйте! Хочу рассчитать стоимость утепления крыши ППУ" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<script>
+// Мобильное меню
+const burger = document.getElementById('burger'), mnav = document.getElementById('mnav');
+burger.addEventListener('click', () => {
+  const open = !mnav.classList.contains('open');
+  mnav.classList.toggle('open', open);
+  burger.setAttribute('aria-expanded', String(open));
+  burger.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+});
+mnav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mnav.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); }));
+
+// Форма: собирает сообщение и открывает WhatsApp. Данные никуда не сохраняются.
+const form = document.getElementById('calc'), submit = document.getElementById('submit');
+const phone = form.phone, phoneErr = document.getElementById('phone-err'), note = document.getElementById('note');
+form.consent.addEventListener('change', () => { submit.disabled = !form.consent.checked; });
+function normPhone(v){ const d = v.replace(/\D/g,''); if (d.length===11 && (d[0]==='7'||d[0]==='8')) return '7'+d.slice(1); if (d.length===10) return '7'+d; return null; }
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const p = normPhone(phone.value);
+  phone.classList.toggle('err', !p); phoneErr.hidden = !!p;
+  if (!p) { phone.focus(); return; }
+  const f = '+'+p[0]+' '+p.slice(1,4)+' '+p.slice(4,7)+' '+p.slice(7,9)+' '+p.slice(9);
+  const area = form.area.value ? form.area.value + ' м²' : 'не указана';
+  const text = 'Здравствуйте! Хочу рассчитать стоимость утепления.\nЧто утеплить: ' + form.object.value + '\nПлощадь: ' + area + '\nТелефон: ' + f;
+  window.open('https://wa.me/77026427026?text=' + encodeURIComponent(text), '_blank', 'noopener');
+  note.textContent = 'Открыли WhatsApp с готовым сообщением. Чтобы заявка дошла, нажмите «Отправить» в чате.';
+  note.classList.add('ok');
+});
+</script>
+
+<script type="module">
+// 3D: две плавные ленты в цветах палитры (синий → фиолетовый → лаванда), медленно волнуются.
+import * as THREE from 'three';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+
+const stage = document.getElementById('stage');
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+try {
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 1.75));
+  renderer.setClearColor(0x000000, 0);
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.05;
+  stage.prepend(renderer.domElement);
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(32, 1, 0.1, 100);
+  camera.position.set(0, 0, 11);
+  const pmrem = new THREE.PMREMGenerator(renderer);
+  scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+  scene.add(new THREE.HemisphereLight('#FFFFFF', '#C9B8FF', 0.6));
+  const sun = new THREE.DirectionalLight('#FFFFFF', 0.7); sun.position.set(3, 5, 6); scene.add(sun);
+
+  const palette = [new THREE.Color('#2F3FD8'), new THREE.Color('#6B5CFF'), new THREE.Color('#A58CFF'), new THREE.Color('#D9CCFF')];
+  const sample = (u) => {
+    const x = Math.min(0.9999, Math.max(0, u)) * (palette.length - 1);
+    const i = Math.floor(x);
+    return palette[i].clone().lerp(palette[i + 1], x - i);
+  };
+
+  // Лента: полоса, изогнутая волной и закрученная вдоль длины
+  const makeRibbon = (width, length, phase, offset) => {
+    const geo = new THREE.PlaneGeometry(length, width, 220, 24);
+    const base = geo.attributes.position.array.slice();
+    const colors = new Float32Array(base.length);
+    for (let i = 0; i < base.length; i += 3) {
+      const c = sample((base[i] / length) + 0.5);
+      colors[i] = c.r; colors[i + 1] = c.g; colors[i + 2] = c.b;
+    }
+    geo.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+    const mat = new THREE.MeshPhysicalMaterial({
+      vertexColors: true, roughness: 0.28, metalness: 0.05, clearcoat: 0.8, clearcoatRoughness: 0.2,
+      iridescence: 0.7, iridescenceIOR: 1.3, sheen: 1, sheenColor: new THREE.Color('#EDE6FF'), sheenRoughness: 0.4,
+      side: THREE.DoubleSide, envMapIntensity: 1.1,
+    });
+    const mesh = new THREE.Mesh(geo, mat);
+    mesh.position.copy(offset);
+    mesh.userData = { base, length, phase };
+    return mesh;
+  };
+  const deform = (mesh, t) => {
+    const { base, length, phase } = mesh.userData;
+    const pos = mesh.geometry.attributes.position.array;
+    for (let i = 0; i < base.length; i += 3) {
+      const x = base[i], v = base[i + 1];
+      const u = x / length;
+      const twist = u * 3.6 + Math.sin(t * 0.5 + phase) * 0.6;
+      const wave = Math.sin(u * 5 + t * 0.7 + phase) * 0.9;
+      pos[i] = x;
+      pos[i + 1] = wave + v * Math.cos(twist);
+      pos[i + 2] = v * Math.sin(twist) + Math.cos(u * 4 + t * 0.6 + phase) * 0.6;
+    }
+    mesh.geometry.attributes.position.needsUpdate = true;
+    mesh.geometry.computeVertexNormals();
+  };
+
+  const group = new THREE.Group();
+  const r1 = makeRibbon(2, 9, 0, new THREE.Vector3(0, 0.3, 0));
+  const r2 = makeRibbon(1.2, 8, 1.8, new THREE.Vector3(0.5, -1, -1));
+  group.add(r1, r2);
+  group.rotation.set(0.25, -0.35, -0.55);
+  group.position.x = 1.2;
+  scene.add(group);
+
+  const resize = () => {
+    const w = stage.clientWidth, h = stage.clientHeight;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h;
+    camera.position.z = w / h < 1 ? 15 : 11;
+    group.position.x = w / h < 1 ? 0.3 : 1.1;
+    camera.updateProjectionMatrix();
+  };
+  resize();
+  addEventListener('resize', resize);
+
+  const mouse = { x: 0, y: 0 };
+  addEventListener('pointermove', (e) => { mouse.x = e.clientX / innerWidth - 0.5; mouse.y = e.clientY / innerHeight - 0.5; }, { passive: true });
+
+  let visible = true, raf = 0;
+  const clock = new THREE.Clock();
+  const frame = () => {
+    raf = 0;
+    const t = reduced ? 2 : clock.getElapsedTime();
+    deform(r1, t); deform(r2, t);
+    group.rotation.y += ((-0.35 + mouse.x * 0.3) - group.rotation.y) * 0.04;
+    group.rotation.x += ((0.25 + mouse.y * 0.2) - group.rotation.x) * 0.04;
+    renderer.render(scene, camera);
+    if (visible && !reduced && !document.hidden) raf = requestAnimationFrame(frame);
+  };
+  new IntersectionObserver(([e]) => { visible = e.isIntersecting; if (visible && !raf) frame(); }).observe(stage);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden && visible && !raf) frame(); });
+  frame();
+  stage.classList.add('ready');
+} catch (err) {
+  console.warn('3D недоступно:', err);
+}
+</script>
+</body>
+</html>
