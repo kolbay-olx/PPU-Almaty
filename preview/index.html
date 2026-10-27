@@ -94,6 +94,12 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdro
 .ph{position:relative;background:linear-gradient(140deg,#E9E6FF,#F6F3FF 55%,#ECE4FF);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:14px;font-weight:500}
 .svc{padding:0;overflow:hidden;display:flex;flex-direction:column}
 .svc .ph{height:230px;border-bottom:1px solid var(--line)}
+.ph.ba{overflow:hidden}
+.ph.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.svc:hover .ph.ba img{transform:scale(1.04)}
+.ph.ba .tag{position:absolute;bottom:12px;padding:5px 12px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.02em;color:#fff;background:rgba(11,16,51,.62);backdrop-filter:blur(6px)}
+.ph.ba .tag.l{left:12px}
+.ph.ba .tag.r{right:12px;background:linear-gradient(135deg,var(--blue,#2F3FD8),var(--violet,#7B5CFF))}
 .svc-body{padding:28px;display:flex;flex-direction:column;flex:1}
 .svc-body p{flex:1}
 .more{display:inline-flex;align-items:center;gap:8px;margin-top:18px;min-height:44px;font-weight:600;color:var(--blue);text-decoration:none}
@@ -262,7 +268,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       <div class="grid3">
         <article class="card svc"><div class="ph" role="img" aria-label="Место для фото: утепление крыши ППУ" data-kk='Фото: шатыр'>Фото: крыша</div><div class="svc-body"><h3 data-kk='Шатырды ППУ-мен жылыту'>Утепление крыши ППУ</h3><p data-kk='Беткейлерге ішінен шашырату — арқалықтар арасына және төсемге.'>Напыление на скаты изнутри — между стропилами и по настилу.</p><a class="more" href="#price" data-kk='Бағасын білу →'>Узнать стоимость →</a></div></article>
         <article class="card svc"><div class="ph" role="img" aria-label="Место для фото: утепление чердака ППУ" data-kk='Фото: шатырасты'>Фото: чердак</div><div class="svc-body"><h3 data-kk='Шатырастын ППУ-мен жылыту'>Утепление чердака ППУ</h3><p data-kk='Шатырасты жылытылмаса және жылу төбе арқылы кетсе — шатырасты жабынын жылытамыз.'>Чердачное перекрытие, если чердак не отапливается и тепло уходит через потолок.</p><a class="more" href="#price" data-kk='Бағасын білу →'>Узнать стоимость →</a></div></article>
-        <article class="card svc"><div class="ph" role="img" aria-label="Место для фото: утепление мансарды ППУ" data-kk='Фото: мансарда'>Фото: мансарда</div><div class="svc-body"><h3 data-kk='Мансарданы ППУ-мен жылыту'>Утепление мансарды ППУ</h3><p data-kk='Мансарданың беткейлері, қасбеттері мен төбесі — шатыр астындағы жайлы бөлме үшін.'>Скаты, фронтоны и потолок мансарды — для комфортной комнаты под крышей.</p><a class="more" href="#price" data-kk='Бағасын білу →'>Узнать стоимость →</a></div></article>
+        <article class="card svc"><div class="ph ba"><img src="img/mansard-before-after.jpg" alt="Крыша до и после напыления ППУ" data-kk-alt="ППУ шашыратуға дейін және кейін шатыр" loading="lazy"><span class="tag l" data-kk='Дейін'>До</span><span class="tag r" data-kk='Кейін'>После</span></div><div class="svc-body"><h3 data-kk='Мансарданы ППУ-мен жылыту'>Утепление мансарды ППУ</h3><p data-kk='Мансарданың беткейлері, қасбеттері мен төбесі — шатыр астындағы жайлы бөлме үшін.'>Скаты, фронтоны и потолок мансарды — для комфортной комнаты под крышей.</p><a class="more" href="#price" data-kk='Бағасын білу →'>Узнать стоимость →</a></div></article>
       </div>
     </div>
   </section>
