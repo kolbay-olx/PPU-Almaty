@@ -93,7 +93,9 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdro
 
 .ph{position:relative;background:linear-gradient(140deg,#E9E6FF,#F6F3FF 55%,#ECE4FF);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:14px;font-weight:500}
 .svc{padding:0;overflow:hidden;display:flex;flex-direction:column}
-.svc .ph{height:230px;border-bottom:1px solid var(--line)}
+.svc .ph{height:230px;border-bottom:1px solid var(--line);overflow:hidden;border-radius:22px 22px 0 0}
+.svc .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.svc:hover .ph img{transform:scale(1.05)}
 .svc-body{padding:28px;display:flex;flex-direction:column;flex:1}
 .svc-body p{flex:1}
 .more{display:inline-flex;align-items:center;gap:8px;margin-top:18px;min-height:44px;font-weight:600;color:var(--blue);text-decoration:none}
@@ -260,9 +262,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     <div class="wrap">
       <div class="sec-head"><div><span class="eyebrow"><span data-kk='Қызметтер'>Услуги</span></span><h2 data-kk='Біз нені жылытамыз'>Что мы утепляем</h2></div><p class="sub" data-kk='Шатырды, шатырастын және мансарданы ППУ шашыратып жылыту — сіздің конструкцияңызға сай.'>Утепление крыши, чердака и мансарды напылением ППУ — под вашу конструкцию.</p></div>
       <div class="grid3">
-        <article class="card svc"><div class="ph" role="img" aria-label="Место для фото: утепление крыши ППУ" data-kk='Фото: шатыр'>Фото: крыша</div><div class="svc-body"><h3 data-kk='Шатырды ППУ-мен жылыту'>Утепление крыши ППУ</h3><p data-kk='Беткейлерге ішінен шашырату — арқалықтар арасына және төсемге.'>Напыление на скаты изнутри — между стропилами и по настилу.</p><a class="more" href="#contacts" data-kk='Бағасын білу →'>Узнать стоимость →</a></div></article>
-        <article class="card svc"><div class="ph" role="img" aria-label="Место для фото: утепление чердака ППУ" data-kk='Фото: шатырасты'>Фото: чердак</div><div class="svc-body"><h3 data-kk='Шатырастын ППУ-мен жылыту'>Утепление чердака ППУ</h3><p data-kk='Шатырасты жылытылмаса және жылу төбе арқылы кетсе — шатырасты жабынын жылытамыз.'>Чердачное перекрытие, если чердак не отапливается и тепло уходит через потолок.</p><a class="more" href="#contacts" data-kk='Бағасын білу →'>Узнать стоимость →</a></div></article>
-        <article class="card svc"><div class="ph" role="img" aria-label="Место для фото: утепление мансарды ППУ" data-kk='Фото: мансарда'>Фото: мансарда</div><div class="svc-body"><h3 data-kk='Мансарданы ППУ-мен жылыту'>Утепление мансарды ППУ</h3><p data-kk='Мансарданың беткейлері, қасбеттері мен төбесі — шатыр астындағы жайлы бөлме үшін.'>Скаты, фронтоны и потолок мансарды — для комфортной комнаты под крышей.</p><a class="more" href="#contacts" data-kk='Бағасын білу →'>Узнать стоимость →</a></div></article>
+        <article class="card svc"><div class="ph"><img src="img/svc-roof.jpg" alt="Напыление ППУ на скаты крыши" data-kk-alt="Шатыр беткейлеріне ППУ шашырату" loading="lazy"></div><div class="svc-body"><h3 data-kk='Шатырды ППУ-мен жылыту'>Утепление крыши ППУ</h3><p data-kk='Беткейлерге ішінен шашырату — арқалықтар арасына және төсемге.'>Напыление на скаты изнутри — между стропилами и по настилу.</p><a class="more" href="#contacts" data-kk='Бағасын білу →'>Узнать стоимость →</a></div></article>
+        <article class="card svc"><div class="ph"><img src="img/svc-attic.jpg" alt="Утепление чердака ППУ между стропилами" data-kk-alt="Шатырастын арқалықтар арасында ППУ-мен жылыту" loading="lazy"></div><div class="svc-body"><h3 data-kk='Шатырастын ППУ-мен жылыту'>Утепление чердака ППУ</h3><p data-kk='Шатырасты жылытылмаса және жылу төбе арқылы кетсе — шатырасты жабынын жылытамыз.'>Чердачное перекрытие, если чердак не отапливается и тепло уходит через потолок.</p><a class="more" href="#contacts" data-kk='Бағасын білу →'>Узнать стоимость →</a></div></article>
+        <article class="card svc"><div class="ph"><img src="img/svc-mansard.jpg" alt="Мансарда, утеплённая ППУ" data-kk-alt="ППУ-мен жылытылған мансарда" loading="lazy"></div><div class="svc-body"><h3 data-kk='Мансарданы ППУ-мен жылыту'>Утепление мансарды ППУ</h3><p data-kk='Мансарданың беткейлері, қасбеттері мен төбесі — шатыр астындағы жайлы бөлме үшін.'>Скаты, фронтоны и потолок мансарды — для комфортной комнаты под крышей.</p><a class="more" href="#contacts" data-kk='Бағасын білу →'>Узнать стоимость →</a></div></article>
       </div>
     </div>
   </section>
