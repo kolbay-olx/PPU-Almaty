@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ppu-almaty.vercel.app/sitemap.xml
