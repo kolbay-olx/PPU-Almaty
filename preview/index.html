@@ -18,7 +18,7 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:84px}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 body{margin:0;background:var(--bg);color:var(--navy);font:400 16px/1.6 "Inter Tight",system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit}
 h1,h2,h3{margin:0;font-family:Montserrat,system-ui,sans-serif;font-weight:600;letter-spacing:-.025em;line-height:1.12}
@@ -63,8 +63,13 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdro
 .lead{font-size:19px;color:var(--muted);max-width:540px;margin:0}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
 .hint{display:flex;align-items:center;gap:10px;margin:22px 0 0;font-size:15px;color:var(--muted)}
-.stage{position:relative;margin:0;height:100%;min-height:560px;display:flex;align-items:center;justify-content:flex-end}
-.stage img{display:block;height:100%;max-height:820px;width:auto;max-width:100%;object-fit:contain;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 18%),linear-gradient(to bottom,transparent 0,#000 6%,#000 94%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent 0,#000 18%),linear-gradient(to bottom,transparent 0,#000 6%,#000 94%,transparent 100%);mask-composite:intersect}
+.stage{position:relative;margin:0;height:100%;min-height:560px;display:flex;align-items:center;justify-content:flex-end;perspective:1400px}
+.tilt{height:100%;max-height:820px;transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translate3d(var(--tx,0px),var(--ty,0px),0);transition:transform .7s cubic-bezier(.22,1,.36,1);will-change:transform}
+.float{position:relative;height:100%;animation:float 7s ease-in-out infinite;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 18%),linear-gradient(to bottom,transparent 0,#000 6%,#000 94%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent 0,#000 18%),linear-gradient(to bottom,transparent 0,#000 6%,#000 94%,transparent 100%);mask-composite:intersect}
+.sheen{position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 38%,rgba(255,255,255,.5) 50%,transparent 62%);background-size:260% 100%;background-position:160% 0;animation:sheen 6.5s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-.7deg) scale(1)}50%{transform:translateY(-18px) rotate(.7deg) scale(1.015)}}
+@keyframes sheen{0%,35%{background-position:160% 0}75%,100%{background-position:-60% 0}}
+.stage img{display:block;height:100%;max-height:820px;width:auto;max-width:100%;object-fit:contain}
 
 /* Секции */
 .sec{padding:120px 0}
@@ -169,6 +174,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   .cta{flex-direction:column}
   .cta .btn{width:100%}
   .stage{height:auto;min-height:0}
+  .tilt,.float{height:auto;width:100%}
   .stage img{height:auto;max-height:none;width:100%}
   .sec{padding:64px 0}
   .sec h2,.final h2{font-size:28px}
@@ -228,8 +234,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
         </div>
         <p class="hint"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2F3FD8" stroke-width="1.8" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Отправьте фото крыши и площадь — уточним детали для расчёта.</p>
       </div>
-      <figure class="stage">
+      <figure class="stage" id="stage">
+        <div class="tilt" id="tilt"><div class="float">
         <img src="img/hero-roof.jpg" width="702" height="1043" alt="Разрез скатной крыши: стропила, обрешётка и сплошной слой пенополиуретана между стропилами" fetchpriority="high" decoding="async">
+        <span class="sheen" aria-hidden="true"></span>
+        </div></div>
       </figure>
     </div>
   </section>
@@ -362,6 +371,21 @@ burger.addEventListener('click', () => {
   burger.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
 });
 mnav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mnav.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); }));
+
+// Фото первого экрана слегка наклоняется за курсором
+(() => {
+  const hero = document.querySelector(".hero"), tilt = document.getElementById("tilt");
+  if (!hero || !tilt || matchMedia("(prefers-reduced-motion: reduce)").matches || !matchMedia("(pointer: fine)").matches) return;
+  hero.addEventListener("pointermove", (e) => {
+    const r = tilt.getBoundingClientRect();
+    const x = (e.clientX - (r.left + r.width / 2)) / innerWidth, y = (e.clientY - (r.top + r.height / 2)) / innerHeight;
+    tilt.style.setProperty("--ry", (x * 14).toFixed(2) + "deg");
+    tilt.style.setProperty("--rx", (-y * 10).toFixed(2) + "deg");
+    tilt.style.setProperty("--tx", (x * 24).toFixed(1) + "px");
+    tilt.style.setProperty("--ty", (y * 16).toFixed(1) + "px");
+  });
+  hero.addEventListener("pointerleave", () => ["--rx", "--ry", "--tx", "--ty"].forEach((p) => tilt.style.removeProperty(p)));
+})();
 
 // Форма: собирает сообщение и открывает WhatsApp. Данные никуда не сохраняются.
 const form = document.getElementById('calc'), submit = document.getElementById('submit');
