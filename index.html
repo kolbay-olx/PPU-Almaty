@@ -428,6 +428,7 @@ function setLang(l) {
   document.documentElement.lang = lang;
   document.title = T().title;
   document.querySelector('meta[name=description]').content = T().desc;
+  document.querySelector('link[rel=canonical]').href = 'https://ppu-almaty.vercel.app/' + (lang === 'kk' ? '?lang=kk' : '');
   document.querySelectorAll('[data-kk]').forEach(el => {
     if (el.dataset.ru === undefined) el.dataset.ru = el.innerHTML;
     el.innerHTML = lang === 'kk' ? el.dataset.kk : el.dataset.ru;
