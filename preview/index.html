@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#F4F2FF">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Inter+Tight:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@500;600;700&family=Inter+Tight:wght@400;500;600&display=swap">
 <style>
 :root{
   --bg:#FFFFFF; --bg2:#F6F4FF; --line:#E6E3F7; --line2:#D2CDF0;
@@ -21,7 +21,7 @@ html{scroll-behavior:smooth;scroll-padding-top:84px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 body{margin:0;background:var(--bg);color:var(--navy);font:400 16px/1.6 "Inter Tight",system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit}
-h1,h2,h3{margin:0;font-family:Montserrat,system-ui,sans-serif;font-weight:600;letter-spacing:-.025em;line-height:1.12}
+h1,h2,h3{margin:0;font-family:"Golos Text",system-ui,sans-serif;font-weight:700;letter-spacing:-.02em;line-height:1.1}
 .wrap{max-width:1280px;margin:0 auto;padding:0 40px}
 :focus-visible{outline:3px solid var(--violet);outline-offset:3px;border-radius:10px}
 .grad{background:var(--brand);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -39,7 +39,7 @@ h1,h2,h3{margin:0;font-family:Montserrat,system-ui,sans-serif;font-weight:600;le
 /* Шапка */
 header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .bar{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.logo{display:flex;align-items:center;gap:10px;font:700 20px Montserrat,sans-serif;letter-spacing:-.02em;text-decoration:none}
+.logo{display:flex;align-items:center;gap:10px;font:700 20px "Golos Text",sans-serif;letter-spacing:-.02em;text-decoration:none}
 .logo-mark{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:var(--brand)}
 .nav{display:flex;gap:30px}
 .nav a{font-size:15px;color:var(--muted);text-decoration:none;font-weight:500}
@@ -56,7 +56,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdro
 /* Первый экран: светлый фон с лавандовым переливом и 3D-лентой */
 .hero{position:relative;overflow:hidden;background:radial-gradient(900px 640px at 95% 30%,rgba(201,184,255,.55),transparent 62%),radial-gradient(700px 520px at 70% 100%,rgba(123,92,255,.18),transparent 65%),linear-gradient(115deg,#FFFFFF 0%,#F7F5FF 45%,#EEE9FF 100%)}
 .hero-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:center;min-height:0}
-.hero-text{position:relative;z-index:2;padding:72px 0 72px 40px;max-width:640px;justify-self:end;width:100%}
+.hero-text{position:relative;z-index:2;padding:72px 48px 72px 40px;max-width:640px;justify-self:end;width:100%}
 .chip{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;border:1px solid var(--line2);background:rgba(255,255,255,.7);font-size:14px;font-weight:500;color:var(--muted)}
 .chip b{width:8px;height:8px;border-radius:50%;background:var(--brand)}
 .hero h1{font-size:68px;line-height:1.04;margin:24px 0 22px}
@@ -94,7 +94,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdro
 .more:hover{color:var(--violet)}
 
 .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;list-style:none;margin:0;padding:0}
-.num{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;margin-bottom:18px;font:600 17px Montserrat,sans-serif;background:#EEEDFF;color:var(--blue)}
+.num{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;margin-bottom:18px;font:600 17px "Golos Text",sans-serif;background:#EEEDFF;color:var(--blue)}
 .num.last{background:var(--brand);color:#fff}
 .steps h3{font-size:18px}
 .steps p{font-size:15px}
@@ -143,7 +143,7 @@ details p{margin:0;padding:0 24px 24px;color:var(--muted)}
 .final p{color:#C9CDF2;font-size:18px;margin:18px 0 0;max-width:640px}
 .contacts-row{display:flex;flex-wrap:wrap;gap:40px;margin-top:28px}
 .contacts-row small{display:block;font-size:13px;color:#A9AEDC}
-.contacts-row a,.contacts-row strong{display:inline-block;margin-top:4px;font:700 24px Montserrat,sans-serif;text-decoration:none;color:#fff}
+.contacts-row a,.contacts-row strong{display:inline-block;margin-top:4px;font:700 24px "Golos Text",sans-serif;text-decoration:none;color:#fff}
 .final .btn-light{border:0}
 
 footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:14px}
