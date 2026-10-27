@@ -205,6 +205,21 @@ form.card:hover{transform:none}
 .consent input{width:22px;height:22px;margin:0;flex:none;accent-color:var(--blue)}
 .consent a{color:var(--blue)}
 .note{font-size:14px;color:var(--muted);margin:0}
+/* Только для казахской версии */
+html[lang="ru"] .kk-only{display:none!important}
+html[lang="kk"] #faq{background:linear-gradient(180deg,#F7F5FF,#FFFFFF)}
+.price-card{display:flex;flex-direction:column;gap:18px;padding:36px}
+.price-card:hover{transform:none}
+.checks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.checks li{position:relative;padding-left:36px;font-weight:500}
+.checks li::before{content:"✓";position:absolute;left:0;top:0;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:700;color:#fff;background:var(--brand)}
+.works-cta{margin-top:24px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:28px 32px;border-radius:22px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
+.works-cta h3{font-size:22px}
+.works-cta p{margin:6px 0 0;color:var(--muted)}
+.final-btns{display:flex;flex-direction:column;gap:12px}
+.final .btn-call{min-height:62px;padding:0 34px;font-size:17px;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35)}
+.final .btn-call:hover{border-color:#fff}
+@media (max-width:640px){.works-cta{flex-direction:column;align-items:stretch;padding:24px 22px}.price-card{padding:24px}}
 .note.ok{color:#1B5E20}
 
 /* FAQ */
@@ -283,7 +298,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       TEPLO DOM
     </a>
     <nav class="nav" aria-label="Основная навигация">
-      <a href="#services" data-kk='Қызметтер'>Услуги</a><a href="#works" data-kk='Жұмыстар'>Работы</a><a href="#faq" data-kk='Сұрақтар'>Вопросы</a><a href="#contacts" data-kk='Байланыс'>Контакты</a>
+      <a href="#services" data-kk='Қызметтер'>Услуги</a><a href="#works" data-kk='Жұмыстар'>Работы</a><a href="#price" class="kk-only">Бағасы</a><a href="#faq" data-kk='Сұрақтар'>Вопросы</a><a href="#contacts" data-kk='Байланыс'>Контакты</a>
     </nav>
     <div class="bar-right">
       <div class="lang" role="group" aria-label="Язык / Тіл"><button type="button" data-lang="kk">ҚАЗ</button><button type="button" data-lang="ru" aria-pressed="true">РУС</button></div>
@@ -295,7 +310,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     </div>
   </div>
   <nav class="mnav" id="mnav" aria-label="Мобильное меню">
-    <a href="#services" data-kk='Қызметтер'>Услуги</a><a href="#works" data-kk='Жұмыстар'>Работы</a><a href="#faq" data-kk='Сұрақтар'>Вопросы</a><a href="#contacts" data-kk='Байланыс'>Контакты</a>
+    <a href="#services" data-kk='Қызметтер'>Услуги</a><a href="#works" data-kk='Жұмыстар'>Работы</a><a href="#price" class="kk-only">Бағасы</a><a href="#faq" data-kk='Сұрақтар'>Вопросы</a><a href="#contacts" data-kk='Байланыс'>Контакты</a>
     <a class="btn btn-primary" href="https://wa.me/77026427026?text=Здравствуйте! Хочу рассчитать стоимость утепления крыши ППУ" data-kk-href="https://wa.me/77026427026?text=Сәлеметсіз бе! Шатырды ППУ-мен жылыту бағасын есептегім келеді" target="_blank" rel="noopener" data-kk='WhatsApp-қа жазу'>Написать в WhatsApp</a>
   </nav>
 </header>
@@ -305,17 +320,17 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero-grid">
       <div class="hero-text">
-        <span class="chip"><b></b><span data-kk='Алматы · жеке үйлер'>Алматы · частные дома</span></span>
+        <span class="chip"><b></b><span data-kk='Алматы және Алматы облысы'>Алматы · частные дома</span></span>
         <h1 id="hero-title" data-kk='<span style="white-space:nowrap">Алматыда шатырды</span><br><span style="white-space:nowrap"><span class="grad">ППУ</span>-мен жылыту</span>'>Утепление крыши <span class="grad">ППУ</span> в&nbsp;Алматы</h1>
-        <p class="lead" data-kk='Жеке үйлердің шатыры мен шатырасты қабатына пенополиуретан құямыз. Конструкцияңызға қарай қабат қалыңдығын таңдап, жұмыс құнын есептейміз.'>Напыление пенополиуретана для крыш и чердаков частных домов. Подберём толщину слоя под вашу конструкцию и рассчитаем стоимость работ.</p>
+        <p class="lead" data-kk='Үйіңіздің жылуын сақтаңыз. Шатырды, шатыр астын және мансарданы пенополиуретанмен жылытамыз. Үйіңіздің құрылысына қарай материал мен қабат қалыңдығын таңдап, жұмыс құнын есептейміз.'>Напыление пенополиуретана для крыш и чердаков частных домов. Подберём толщину слоя под вашу конструкцию и рассчитаем стоимость работ.</p>
         <div class="cta">
-          <a class="btn btn-primary" href="#contacts" data-kk='Бағасын есептеу'>Рассчитать стоимость</a>
+          <a class="btn btn-primary" href="#contacts" data-kk-href="#price" data-kk='Жылыту құнын білу'>Рассчитать стоимость</a>
           <a class="btn btn-light" href="https://wa.me/77026427026?text=Здравствуйте! Хочу обсудить утепление крыши ППУ" data-kk-href="https://wa.me/77026427026?text=Сәлеметсіз бе! Шатырды ППУ-мен жылытуды талқылағым келеді" target="_blank" rel="noopener">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="#16A34A" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.1 5 5 0 0 0 1 2.6 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3Z"/></svg>
-            <span data-kk='WhatsApp-та талқылау'>Обсудить в WhatsApp</span>
+            <span data-kk='WhatsApp-қа жазу'>Обсудить в WhatsApp</span>
           </a>
         </div>
-        <p class="hint"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2F3FD8" stroke-width="1.8" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><span data-kk='Шатырдың фотосы мен ауданын жіберіңіз — есептеу үшін мәліметтерді нақтылаймыз.'>Отправьте фото крыши и площадь — уточним детали для расчёта.</span></p>
+        <p class="hint"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2F3FD8" stroke-width="1.8" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><span data-kk='Шатырдың фотосы мен шамамен ауданын жіберіңіз. Қандай жұмыс қажет екенін нақтылап, бағасын есептейміз.'>Отправьте фото крыши и площадь — уточним детали для расчёта.</span></p>
       </div>
       <figure class="stage">
         <img src="img/hero-attic-full.jpg" data-kk-src="img/hero-attic-full-kk.jpg" width="1448" height="1086" alt="Утепление чердака ППУ: чердачное перекрытие под скатной крышей покрыто сплошным слоем пенополиуретана" data-kk-alt="Шатырастын ППУ-мен жылыту: еңіс шатыр астындағы жабын тұтас пенополиуретан қабатымен жабылған" fetchpriority="high">
@@ -327,11 +342,12 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   <section class="sec" id="tasks">
     <div class="wrap">
       
-      <h2 class="ctr" style="max-width:720px;margin-bottom:28px" data-kk='<span class="grad">Пенополиуретанмен</span> жылытудың пайдасы'>Что даёт напыление <span class="grad">пенополиуретана</span></h2>
+      <h2 class="ctr" style="max-width:720px;margin-bottom:28px" data-kk='<span class="grad">ППУ-мен</span> жылытудың пайдасы'>Что даёт напыление <span class="grad">пенополиуретана</span></h2>
+      <p class="sub kk-only" style="margin:-14px auto 28px;text-align:center">Шатырдан кететін жылуды азайтыңыз</p>
       <div class="grid3">
-        <article class="card"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg></span><h3 data-kk='Шатыр арқылы жылу шығынын азайту'>Снизить потери тепла через крышу</h3><p data-kk='Көбік қабаты арқалықтар арасындағы кеңістікті жауып, үйде жылуды сақтауға көмектеседі.'>Слой пены закрывает пространство между стропилами и помогает удерживать тепло в доме.</p></article>
-        <article class="card"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20 9 8l4 6 3-4 5 10z"/></svg></span><h3 data-kk='Күрделі пішінді жерлерді жылыту'>Утеплить участки сложной формы</h3><p data-kk='Шашыратылған көбік мансарда беткейлерінің, түйісулер мен қол жетпейтін түйіндердің пішінін қайталайды.'>Напыление повторяет форму скатов мансарды, примыканий и труднодоступных узлов.</p></article>
-        <article class="card"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 12h18"/></svg></span><h3 data-kk='Тұтас жылытқыш қабатын жасау'>Создать сплошной слой утеплителя</h3><p data-kk='Пенополиуретан тақталар арасындағы жіктерсіз жағылады — жылу көбіне сол жіктерден кетеді.'>Пенополиуретан наносится без стыков между плитами, через которые часто уходит тепло.</p></article>
+        <article class="card"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg></span><h3 data-kk='Үйдегі жылуды сақтауға көмектеседі'>Снизить потери тепла через крышу</h3><p data-kk='ППУ қабаты шатырдағы саңылауларды жауып, жылудың сыртқа шығуын азайтуға көмектеседі.'>Слой пены закрывает пространство между стропилами и помогает удерживать тепло в доме.</p></article>
+        <article class="card"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20 9 8l4 6 3-4 5 10z"/></svg></span><h3 data-kk='Қиын жерлерге де жетеді'>Утеплить участки сложной формы</h3><p data-kk='Шашыратылған көбік арқалықтардың арасын, бұрыштар мен қол жеткізу қиын тұстарды толтырады.'>Напыление повторяет форму скатов мансарды, примыканий и труднодоступных узлов.</p></article>
+        <article class="card"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 12h18"/></svg></span><h3 data-kk='Біртұтас қабат қалыптастырады'>Создать сплошной слой утеплителя</h3><p data-kk='ППУ бетке тұтас жағылып, аралық жіктері жоқ жылытқыш қабат жасайды.'>Пенополиуретан наносится без стыков между плитами, через которые часто уходит тепло.</p></article>
       </div>
     </div>
   </section>
@@ -339,12 +355,13 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   <!-- Услуги -->
   <section class="sec tint" id="services">
     <div class="wrap">
-      <div class="sec-head"><div><h2 data-kk='Біз нені жылытамыз'>Что мы утепляем</h2></div><p class="sub" data-kk='Шатырды, шатырастын және мансарданы ППУ шашыратып жылыту — сіздің конструкцияңызға сай.'>Утепление крыши, чердака и мансарды напылением ППУ — под вашу конструкцию.</p></div>
+      <div class="sec-head"><div><h2 data-kk='Біз нені жылытамыз?'>Что мы утепляем</h2></div><p class="sub" data-kk='Үйіңізге сай жылыту шешімі. Алдымен жылу қай жерден кететінін және қай бөлікті жылыту қажет екенін нақтылаймыз.'>Утепление крыши, чердака и мансарды напылением ППУ — под вашу конструкцию.</p></div>
       <div class="grid3">
-        <article class="card svc"><div class="ph"><img src="img/svc-roof.jpg" alt="Утепление крыши ППУ в Алматы: напыление пенополиуретана на скаты изнутри" data-kk-alt="Алматыда шатырды ППУ-мен жылыту: беткейлерге ішінен пенополиуретан құю" loading="lazy"></div><div class="svc-body"><h3 data-kk='Шатырды ППУ-мен жылыту'>Утепление крыши ППУ</h3><p data-kk='Шатырдың ішкі жағынан арқалықтардың арасына және төсемге ППУ құямыз.'>Напыление на скаты изнутри — между стропилами и по настилу.</p></div></article>
-        <article class="card svc"><div class="ph"><img src="img/svc-attic.jpg" alt="Утепление чердака пенополиуретаном между стропилами" data-kk-alt="Шатыр астын арқалықтар арасында пенополиуретанмен жылыту" loading="lazy"></div><div class="svc-body"><h3 data-kk='Шатырастын ППУ-мен жылыту'>Утепление чердака ППУ</h3><p data-kk='Шатырасты жылытылмаса және жылу төбе арқылы кетсе — шатырасты жабынын жылытамыз.'>Чердачное перекрытие, если чердак не отапливается и тепло уходит через потолок.</p></div></article>
-        <article class="card svc"><div class="ph"><img src="img/svc-mansard.jpg" alt="Утепление мансарды ППУ в частном доме" data-kk-alt="Жеке үйде мансарданы ППУ-мен жылыту" loading="lazy"></div><div class="svc-body"><h3 data-kk='Мансарданы ППУ-мен жылыту'>Утепление мансарды ППУ</h3><p data-kk='Мансарданың беткейлері, қасбеттері мен төбесі — шатыр астындағы жайлы бөлме үшін.'>Скаты, фронтоны и потолок мансарды — для комфортной комнаты под крышей.</p></div></article>
+        <article class="card svc"><div class="ph"><img src="img/svc-roof.jpg" alt="Утепление крыши ППУ в Алматы: напыление пенополиуретана на скаты изнутри" data-kk-alt="Алматыда шатырды ППУ-мен жылыту: беткейлерге ішінен пенополиуретан құю" loading="lazy"></div><div class="svc-body"><h3 data-kk='Шатырды ППУ-мен жылыту'>Утепление крыши ППУ</h3><p data-kk='Шатырдың ішкі жағын, арқалықтардың арасын және көлбеу бөліктерін жылытамыз.'>Напыление на скаты изнутри — между стропилами и по настилу.</p></div></article>
+        <article class="card svc"><div class="ph"><img src="img/svc-attic.jpg" alt="Утепление чердака пенополиуретаном между стропилами" data-kk-alt="Шатыр астын арқалықтар арасында пенополиуретанмен жылыту" loading="lazy"></div><div class="svc-body"><h3 data-kk='Шатыр астын ППУ-мен жылыту'>Утепление чердака ППУ</h3><p data-kk='Жылу бөлмеден төбе арқылы кетсе, шатыр астындағы еденді жылытуды қарастырамыз.'>Чердачное перекрытие, если чердак не отапливается и тепло уходит через потолок.</p></div></article>
+        <article class="card svc"><div class="ph"><img src="img/svc-mansard.jpg" alt="Утепление мансарды ППУ в частном доме" data-kk-alt="Жеке үйде мансарданы ППУ-мен жылыту" loading="lazy"></div><div class="svc-body"><h3 data-kk='Мансарданы ППУ-мен жылыту'>Утепление мансарды ППУ</h3><p data-kk='Мансарданың көлбеу қабырғалары мен төбесін жылытып, бөлмедегі жылуды сақтауға көмектесеміз.'>Скаты, фронтоны и потолок мансарды — для комфортной комнаты под крышей.</p></div></article>
       </div>
+      <div class="kk-only" style="text-align:center;margin-top:28px"><a class="btn btn-primary" href="https://wa.me/77026427026?text=Сәлеметсіз бе! Менің үйіме шатырды, шатыр астын немесе мансарданы жылытудың қайсысы қажет екенін білгім келеді" target="_blank" rel="noopener">Менің үйіме қайсысы қажет?</a></div>
     </div>
   </section>
 
@@ -352,12 +369,13 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   <section class="sec" id="steps">
     <div class="wrap">
       
-      <h2 class="ctr" style="margin-bottom:28px" data-kk='Жұмыс қалай жүреді'>Как проходит работа</h2>
+      <h2 class="ctr" style="margin-bottom:28px" data-kk='Жұмыс қалай жүреді?'>Как проходит работа</h2>
+      <p class="sub kk-only" style="margin:-14px auto 28px;text-align:center">Фото жіберуден дайын жұмысқа дейін</p>
       <ol class="steps">
-        <li class="card"><span class="num">1</span><h3 data-kk='Ауданы мен конструкцияны нақтылаймыз'>Уточняем площадь и конструкцию</h3><p data-kk='Фото, өлшемдер бойынша немесе нысанды қарағаннан кейін.'>По фото, размерам или после осмотра объекта.</p></li>
-        <li class="card"><span class="num">2</span><h3 data-kk='Материал мен қабат қалыңдығын таңдаймыз'>Подбираем материал и толщину слоя</h3><p data-kk='Шатыр конструкциясы мен сіздің мақсатыңызды ескеріп.'>С учётом конструкции крыши и ваших задач.</p></li>
-        <li class="card"><span class="num">3</span><h3 data-kk='Сметаны және бетті дайындауды келісеміз'>Согласовываем смету и подготовку поверхности</h3><p data-kk='Жұмыс көлемін және басталар алдында не істеу керегін белгілейміз.'>Фиксируем объём работ и что сделать до начала.</p></li>
-        <li class="card"><span class="num last">4</span><h3 data-kk='Шашыратып, нәтижені тексереміз'>Выполняем напыление и проверяем результат</h3><p data-kk='Дайын бетті сізбен бірге қараймыз.'>Вместе с вами осматриваем готовую поверхность.</p></li>
+        <li class="card"><span class="num">1</span><h3 data-kk='Шатырыңыз туралы мәлімет аламыз'>Уточняем площадь и конструкцию</h3><p data-kk='Фотосын, ауданын және мекенжайын жібересіз. Қажет болса, нысанды барып қараймыз.'>По фото, размерам или после осмотра объекта.</p></li>
+        <li class="card"><span class="num">2</span><h3 data-kk='Материал мен қалыңдықты таңдаймыз'>Подбираем материал и толщину слоя</h3><p data-kk='Үйдің құрылысы мен қай бөлігін жылыту керегін ескеріп, қолайлы нұсқаны ұсынамыз.'>С учётом конструкции крыши и ваших задач.</p></li>
+        <li class="card"><span class="num">3</span><h3 data-kk='Бағасы мен жұмыс күнін келісеміз'>Согласовываем смету и подготовку поверхности</h3><p data-kk='Жұмыс көлемін, құнын және алдын ала не дайындау керегін түсіндіреміз.'>Фиксируем объём работ и что сделать до начала.</p></li>
+        <li class="card"><span class="num last">4</span><h3 data-kk='ППУ шашыратып, нәтижесін тексереміз'>Выполняем напыление и проверяем результат</h3><p data-kk='Келісілген бөліктерді жылытамыз. Жұмыс біткен соң дайын қабатты сізбен бірге қарап шығамыз.'>Вместе с вами осматриваем готовую поверхность.</p></li>
       </ol>
     </div>
   </section>
@@ -365,11 +383,28 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   <!-- Работы -->
   <section class="sec tint" id="works">
     <div class="wrap">
-      <div class="sec-head"><div><h2 data-kk='ППУ-мен жылыту: орындалған жұмыстар'>Утепление ППУ: выполненные работы</h2></div><p class="sub" data-kk='Нысандардың ППУ-мен жылытуға дейінгі және кейінгі көрінісі.'>Как выглядят объекты до и после утепления ППУ.</p></div>
+      <div class="sec-head"><div><h2 data-kk='Орындалған жұмыстар'>Утепление ППУ: выполненные работы</h2></div><p class="sub" data-kk='ППУ-мен жылытуға дейін және кейін. Фотолардан шатырдың бастапқы күйін және ППУ жағылғаннан кейінгі көрінісін қараңыз.'>Как выглядят объекты до и после утепления ППУ.</p></div>
       <div class="grid3">
-        <article class="card work"><div class="ph ba"><img src="img/work-01.jpg" alt="Утепление чердака ППУ: до и после" data-kk-alt="Шатыр астын ППУ-мен жылыту: дейін және кейін" loading="lazy"><span class="tag l" data-kk='Дейін'>До</span><span class="tag r" data-kk='Кейін'>После</span></div></article>
-        <article class="card work"><div class="ph ba"><img src="img/work-07.jpg" alt="Утепление плоской крыши ППУ: до и после" data-kk-alt="Тегіс шатырды ППУ-мен жылыту: дейін және кейін" loading="lazy"><span class="tag l" data-kk='Дейін'>До</span><span class="tag r" data-kk='Кейін'>После</span></div></article>
-        <article class="card work"><div class="ph ba"><img src="img/work-09.jpg" alt="Утепление скатной крыши ППУ: до и после" data-kk-alt="Құламалы шатырды ППУ-мен жылыту: дейін және кейін" loading="lazy"><span class="tag l" data-kk='Дейін'>До</span><span class="tag r" data-kk='Кейін'>После</span></div></article>
+        <article class="card work"><div class="ph ba"><img src="img/work-01.jpg" alt="Утепление чердака ППУ: до и после" data-kk-alt="Шатыр астын ППУ-мен жылыту: дейін және кейін" loading="lazy"><span class="tag l" data-kk='Жылытуға дейін'>До</span><span class="tag r" data-kk='Жылытудан кейін'>После</span></div></article>
+        <article class="card work"><div class="ph ba"><img src="img/work-07.jpg" alt="Утепление плоской крыши ППУ: до и после" data-kk-alt="Тегіс шатырды ППУ-мен жылыту: дейін және кейін" loading="lazy"><span class="tag l" data-kk='Жылытуға дейін'>До</span><span class="tag r" data-kk='Жылытудан кейін'>После</span></div></article>
+        <article class="card work"><div class="ph ba"><img src="img/work-09.jpg" alt="Утепление скатной крыши ППУ: до и после" data-kk-alt="Құламалы шатырды ППУ-мен жылыту: дейін және кейін" loading="lazy"><span class="tag l" data-kk='Жылытуға дейін'>До</span><span class="tag r" data-kk='Жылытудан кейін'>После</span></div></article>
+      </div>
+      <div class="works-cta kk-only"><div><h3>Сіздің шатырыңызға қандай жұмыс қажет?</h3><p>Фотосын WhatsApp-қа жіберіңіз — қарап, қай бөлігін жылытуға болатынын айтамыз.</p></div><a class="btn btn-primary" href="https://wa.me/77026427026?text=Сәлеметсіз бе! Шатырдың фотосын жіберемін, қандай жұмыс қажет екенін айтыңызшы" target="_blank" rel="noopener">Шатырдың фотосын жіберу</a></div>
+    </div>
+  </section>
+
+  <!-- Стоимость (только казахская версия) -->
+  <section class="sec kk-only" id="price">
+    <div class="wrap price">
+      <div>
+        <h2>Шатырыңызды жылыту қанша тұрады?</h2>
+        <p class="lead" style="margin-top:20px">Баға ауданға, ППУ түріне, қабат қалыңдығына және беттің жағдайына байланысты есептеледі.</p>
+      </div>
+      <div class="card price-card">
+        <h3 style="font-size:22px">Есептеу үшін мынаны жіберіңіз:</h3>
+        <ul class="checks"><li>Шатырдың немесе шатыр астының фотосы</li><li>Шамамен ауданы</li><li>Үй орналасқан аудан немесе елді мекен</li></ul>
+        <p class="note">Мәліметтерді қарап, алдын ала есеп береміз. Нақты құнын жұмыс көлемін анықтағаннан кейін келісеміз.</p>
+        <a class="btn btn-primary" href="https://wa.me/77026427026?text=Сәлеметсіз бе! Шатырды ППУ-мен жылыту бағасын білгім келеді" target="_blank" rel="noopener">Бағасын WhatsApp арқылы білу</a>
       </div>
     </div>
   </section>
@@ -379,11 +414,12 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     <div class="wrap faq">
       <div><span class="eyebrow"><span>FAQ</span></span><h2 data-kk='Сұрақтар мен жауаптар'>Вопросы и ответы</h2></div>
       <div class="faq-list">
-        <details open><summary><h3 data-kk='ППУ-дың қандай қалыңдығын таңдау керек?'>Какую толщину ППУ выбрать?</h3><span class="plus" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p data-kk='Қалыңдығы шатыр конструкциясына, ППУ түріне және жылыту мақсатына байланысты. Нысан параметрлерін нақтылағаннан кейін нұсқа ұсынамыз.'>Толщина зависит от конструкции крыши, типа ППУ и задачи утепления. Предложим вариант после того, как уточним параметры объекта.</p></details>
-        <details><summary><h3 data-kk='Бағасы неге байланысты?'>От чего зависит стоимость?</h3><span class="plus" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p data-kk='Ауданға, қабат қалыңдығына, ППУ түріне, беттің күйіне және жетудің қиындығына. Нақты соманы нысанды бағалағаннан кейін айтамыз.'>От площади, толщины слоя, типа ППУ, состояния поверхности и сложности доступа. Точную сумму назовём после оценки объекта.</p></details>
-        <details><summary><h3 data-kk='Шатырды жұмысқа қалай дайындау керек?'>Как подготовить крышу к работам?</h3><span class="plus" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p data-kk='Әдетте бетке еркін жол болуы керек. Сіздің нысаныңызда не қажет екенін сметаны келіскенде айтамыз.'>Обычно нужен свободный доступ к поверхности. Что потребуется на вашем объекте, расскажем при согласовании сметы.</p></details>
-        <details><summary><h3 data-kk='Жылыту қанша уақыт алады?'>Сколько времени занимает утепление?</h3><span class="plus" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p data-kk='Мерзімі нысанның ауданы мен күрделілігіне байланысты. Бағалағаннан кейін шамамен мерзімін айтып, жұмыс басталатын күнді келісеміз.'>Срок зависит от площади и сложности объекта. Ориентир назовём после оценки и согласуем дату начала работ.</p></details>
-        <details><summary><h3 data-kk='Менің ауданыма келесіздер ме?'>Вы выезжаете в мой район?</h3><span class="plus" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p data-kk='Біз Алматы қаласында және Алматы облысында жұмыс істейміз. Ауданыңызды немесе мекенжайыңызды WhatsApp-қа жазыңыз — келе алатынымызды бірден айтамыз.'>Мы работаем в Алматы и Алматинской области. Напишите район или адрес в WhatsApp — сразу скажем, сможем ли приехать.</p></details>
+        <details open><summary><h3 data-kk='ППУ қалыңдығы қандай болуы керек?'>Какую толщину ППУ выбрать?</h3><span class="plus" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p data-kk='Барлық үйге бірдей қалыңдық жарамайды. Оны шатырдың құрылысына, ППУ түріне және жылыту мақсатына қарай таңдаймыз.'>Толщина зависит от конструкции крыши, типа ППУ и задачи утепления. Предложим вариант после того, как уточним параметры объекта.</p></details>
+        <details><summary><h3 data-kk='Бағасы неге байланысты?'>От чего зависит стоимость?</h3><span class="plus" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p data-kk='Ауданға, қабат қалыңдығына, материал түріне және жұмыстың күрделілігіне байланысты. Жұмыс басталғанға дейін көлемі мен құнын келісеміз.'>От площади, толщины слоя, типа ППУ, состояния поверхности и сложности доступа. Точную сумму назовём после оценки объекта.</p></details>
+        <details><summary><h3 data-kk='Шатырды жұмысқа қалай дайындаймын?'>Как подготовить крышу к работам?</h3><span class="plus" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p data-kk='Жұмыс жасалатын жерге еркін өту мүмкіндігі болуы керек. Нені босату, тазалау немесе қорғау керегін алдын ала айтамыз.'>Обычно нужен свободный доступ к поверхности. Что потребуется на вашем объекте, расскажем при согласовании сметы.</p></details>
+        <details><summary><h3 data-kk='Жылыту қанша уақыт алады?'>Сколько времени занимает утепление?</h3><span class="plus" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p data-kk='Мерзімі аудан мен шатырдың күрделілігіне байланысты. Нысан туралы мәлімет алғаннан кейін шамамен қанша уақыт қажет екенін айтамыз.'>Срок зависит от площади и сложности объекта. Ориентир назовём после оценки и согласуем дату начала работ.</p></details>
+        <details><summary><h3 data-kk='Алматы облысына шығасыздар ма?'>Вы выезжаете в мой район?</h3><span class="plus" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p data-kk='Иә, Алматы қаласы мен Алматы облысында жұмыс істейміз. Елді мекеніңізді WhatsApp-қа жазыңыз — бару мүмкіндігі мен уақытын нақтылаймыз.'>Мы работаем в Алматы и Алматинской области. Напишите район или адрес в WhatsApp — сразу скажем, сможем ли приехать.</p></details>
+        <details class="kk-only"><summary><h3>Бағасын фото арқылы білуге бола ма?</h3><span class="plus" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Фото мен аудан бойынша алдын ала есеп беруге болады. Егер мәлімет жеткіліксіз болса, қосымша өлшем сұраймыз немесе нысанды барып қарауды келісеміз.</p></details>
       </div>
     </div>
   </section>
@@ -393,14 +429,18 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     <div class="wrap">
       <div class="final">
         <div>
-          <h2 data-kk='Шатырды жылытуды жоспарлап жүрсіз бе? Есептеуден бастаңыз'>Планируете утеплить крышу? Начните с&nbsp;расчёта</h2>
-          <p data-kk='Нысанның фотосы мен шамамен ауданын WhatsApp-қа жіберіңіз — жылытудың қолайлы нұсқасын талқылаймыз.'>Отправьте фото объекта и примерную площадь в WhatsApp — обсудим подходящий вариант утепления.</p>
+          <h2 data-kk='Үйдің жылуын шатырдан сақтаңыз'>Планируете утеплить крышу? Начните с&nbsp;расчёта</h2>
+          <p data-kk='Шатырыңыздың фотосын жіберіңіз. Қай бөлігін жылыту қажет екенін анықтап, қолайлы нұсқа мен жұмыс құнын ұсынамыз.'>Отправьте фото объекта и примерную площадь в WhatsApp — обсудим подходящий вариант утепления.</p>
+          <p class="kk-only" style="font-size:15px;color:#A9AEDC"><strong style="color:#fff">TEPLO DOM</strong> — шатырды, шатыр астын және мансарданы ППУ-мен жылыту</p>
           <div class="contacts-row">
-            <div class="phones"><small data-kk='Телефондар'>Телефоны</small><a href="tel:+77026427026">+7 702 642 70 26</a><a href="tel:+77475575256">+7 747 557 52 56</a><a href="tel:+77780877779">+7 778 087 77 79</a></div>
-            <div><small data-kk='Аймақ'>Регион</small><strong data-kk='Алматы және облысы'>Алматы и область</strong></div>
+            <div class="phones"><small data-kk='Телефон'>Телефоны</small><a href="tel:+77026427026">+7 702 642 70 26</a><a href="tel:+77475575256">+7 747 557 52 56</a><a href="tel:+77780877779">+7 778 087 77 79</a></div>
+            <div><small data-kk='Аймақ'>Регион</small><strong data-kk='Алматы және Алматы облысы'>Алматы и область</strong></div>
           </div>
         </div>
-        <a class="btn btn-light" href="https://wa.me/77026427026" target="_blank" rel="noopener" style="min-height:62px;padding:0 34px;font-size:17px" data-kk='Фотоны WhatsApp-қа жіберу'>Отправить фото в WhatsApp</a>
+        <div class="final-btns">
+          <a class="btn btn-light" href="https://wa.me/77026427026" data-kk-href="https://wa.me/77026427026?text=Сәлеметсіз бе! Шатырдың фотосын жіберемін" target="_blank" rel="noopener" style="min-height:62px;padding:0 34px;font-size:17px" data-kk='WhatsApp-қа фото жіберу'>Отправить фото в WhatsApp</a>
+          <a class="btn btn-call kk-only" href="tel:+77026427026">Қоңырау шалу</a>
+        </div>
       </div>
     </div>
   </section>
