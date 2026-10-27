@@ -109,6 +109,12 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdro
 
 .work{padding:0;overflow:hidden}
 .work .ph{height:280px;border-bottom:1px solid var(--line)}
+.ph.ba{overflow:hidden}
+.ph.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.work:hover .ph.ba img{transform:scale(1.04)}
+.ph.ba .tag{position:absolute;bottom:12px;padding:5px 12px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.02em;color:#fff;background:rgba(11,16,51,.62);backdrop-filter:blur(6px)}
+.ph.ba .tag.l{left:12px}
+.ph.ba .tag.r{right:12px;background:var(--brand)}
 .work dl{margin:0;padding:24px 28px 28px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 20px}
 .work dt{font-size:13px;color:var(--muted)}
 .work dd{margin:3px 0 0;font-weight:600}
@@ -290,9 +296,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     <div class="wrap">
       <div class="sec-head"><div><h2 data-kk='Орындалған жұмыстар'>Выполненные работы</h2></div><p class="sub" data-kk='Мұнда TEPLO DOM-ның нақты нысандарының фотолары мен деректері пайда болады.'>Здесь появятся фото и данные реальных объектов TEPLO DOM.</p></div>
       <div class="grid3">
-        <article class="card work"><div class="ph" role="img" aria-label="Место для фото объекта" data-kk='Нысан фотосы'>Фото объекта</div><dl><div><dt data-kk='Нысан'>Объект</dt><dd data-kk='[Нысан түрі]'>[Тип объекта]</dd></div><div><dt data-kk='Алматы ауданы'>Район Алматы</dt><dd data-kk='[Аудан]'>[Район]</dd></div><div><dt data-kk='Ауданы'>Площадь</dt><dd>[— м²]</dd></div><div><dt data-kk='Қабат қалыңдығы'>Толщина слоя</dt><dd>[— мм]</dd></div></dl></article>
-        <article class="card work"><div class="ph" role="img" aria-label="Место для фото объекта" data-kk='Нысан фотосы'>Фото объекта</div><dl><div><dt data-kk='Нысан'>Объект</dt><dd data-kk='[Нысан түрі]'>[Тип объекта]</dd></div><div><dt data-kk='Алматы ауданы'>Район Алматы</dt><dd data-kk='[Аудан]'>[Район]</dd></div><div><dt data-kk='Ауданы'>Площадь</dt><dd>[— м²]</dd></div><div><dt data-kk='Қабат қалыңдығы'>Толщина слоя</dt><dd>[— мм]</dd></div></dl></article>
-        <article class="card work"><div class="ph" role="img" aria-label="Место для фото объекта" data-kk='Нысан фотосы'>Фото объекта</div><dl><div><dt data-kk='Нысан'>Объект</dt><dd data-kk='[Нысан түрі]'>[Тип объекта]</dd></div><div><dt data-kk='Алматы ауданы'>Район Алматы</dt><dd data-kk='[Аудан]'>[Район]</dd></div><div><dt data-kk='Ауданы'>Площадь</dt><dd>[— м²]</dd></div><div><dt data-kk='Қабат қалыңдығы'>Толщина слоя</dt><dd>[— мм]</dd></div></dl></article>
+        <article class="card work"><div class="ph ba"><img src="img/work-01.jpg" alt="Чердак до и после напыления ППУ" data-kk-alt="ППУ шашыратуға дейін және кейін шатырасты" loading="lazy"><span class="tag l" data-kk='Дейін'>До</span><span class="tag r" data-kk='Кейін'>После</span></div><dl><div><dt data-kk='Нысан'>Объект</dt><dd data-kk='Шатырасты'>Чердак</dd></div><div><dt data-kk='Алматы ауданы'>Район Алматы</dt><dd data-kk='[Аудан]'>[Район]</dd></div><div><dt data-kk='Ауданы'>Площадь</dt><dd>[— м²]</dd></div><div><dt data-kk='Қабат қалыңдығы'>Толщина слоя</dt><dd>[— мм]</dd></div></dl></article>
+        <article class="card work"><div class="ph ba"><img src="img/work-07.jpg" alt="Плоская крыша до и после напыления ППУ" data-kk-alt="ППУ шашыратуға дейін және кейін тегіс шатыр" loading="lazy"><span class="tag l" data-kk='Дейін'>До</span><span class="tag r" data-kk='Кейін'>После</span></div><dl><div><dt data-kk='Нысан'>Объект</dt><dd data-kk='Тегіс шатыр'>Плоская крыша</dd></div><div><dt data-kk='Алматы ауданы'>Район Алматы</dt><dd data-kk='[Аудан]'>[Район]</dd></div><div><dt data-kk='Ауданы'>Площадь</dt><dd>[— м²]</dd></div><div><dt data-kk='Қабат қалыңдығы'>Толщина слоя</dt><dd>[— мм]</dd></div></dl></article>
+        <article class="card work"><div class="ph ba"><img src="img/work-09.jpg" alt="Скатная крыша до и после напыления ППУ" data-kk-alt="ППУ шашыратуға дейін және кейін құламалы шатыр" loading="lazy"><span class="tag l" data-kk='Дейін'>До</span><span class="tag r" data-kk='Кейін'>После</span></div><dl><div><dt data-kk='Нысан'>Объект</dt><dd data-kk='Құламалы шатыр'>Скатная крыша</dd></div><div><dt data-kk='Алматы ауданы'>Район Алматы</dt><dd data-kk='[Аудан]'>[Район]</dd></div><div><dt data-kk='Ауданы'>Площадь</dt><dd>[— м²]</dd></div><div><dt data-kk='Қабат қалыңдығы'>Толщина слоя</dt><dd>[— мм]</dd></div></dl></article>
       </div>
     </div>
   </section>
