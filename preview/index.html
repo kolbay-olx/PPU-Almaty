@@ -63,10 +63,10 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdro
 .lead{font-size:19px;color:var(--muted);max-width:540px;margin:0}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
 .hint{display:flex;align-items:center;gap:10px;margin:22px 0 0;font-size:15px;color:var(--muted)}
-.stage{position:relative;margin:0;height:100%;min-height:560px;display:flex;align-items:center;justify-content:flex-end;perspective:1400px}
-.tilt{height:100%;max-height:820px;transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translate3d(var(--tx,0px),var(--ty,0px),0);transition:transform .7s cubic-bezier(.22,1,.36,1);will-change:transform}
-.float{position:relative;height:100%;animation:float 7s ease-in-out infinite;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 18%),linear-gradient(to bottom,transparent 0,#000 6%,#000 94%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent 0,#000 18%),linear-gradient(to bottom,transparent 0,#000 6%,#000 94%,transparent 100%);mask-composite:intersect}
-.sheen{position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 38%,rgba(255,255,255,.5) 50%,transparent 62%);background-size:260% 100%;background-position:160% 0;animation:sheen 6.5s ease-in-out infinite}
+.stage{position:relative;margin:0;height:100%;min-height:560px;display:flex;align-items:center;justify-content:center;perspective:1400px}
+.tilt{height:84%;max-height:720px;transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translate3d(var(--tx,0px),var(--ty,0px),0);transition:transform .7s cubic-bezier(.22,1,.36,1);will-change:transform}
+.float{position:relative;height:100%;border-radius:28px;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.6),0 40px 80px -36px rgba(11,16,51,.55),0 18px 40px -24px rgba(47,63,216,.35);animation:float 7s ease-in-out infinite}
+.sheen{position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 38%,rgba(255,255,255,.28) 50%,transparent 62%);background-size:260% 100%;background-position:160% 0;animation:sheen 6.5s ease-in-out infinite}
 @keyframes float{0%,100%{transform:translateY(0) rotate(-.7deg) scale(1)}50%{transform:translateY(-18px) rotate(.7deg) scale(1.015)}}
 @keyframes sheen{0%,35%{background-position:160% 0}75%,100%{background-position:-60% 0}}
 .stage img{display:block;height:100%;max-height:820px;width:auto;max-width:100%;object-fit:contain}
@@ -173,7 +173,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   .lead{font-size:17px}
   .cta{flex-direction:column}
   .cta .btn{width:100%}
-  .stage{height:auto;min-height:0}
+  .stage{height:auto;min-height:0;padding:28px 16px 8px}
+  .float{border-radius:22px}
   .tilt,.float{height:auto;width:100%}
   .stage img{height:auto;max-height:none;width:100%}
   .sec{padding:64px 0}
@@ -236,7 +237,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       </div>
       <figure class="stage" id="stage">
         <div class="tilt" id="tilt"><div class="float">
-        <img src="img/hero-roof.jpg" width="702" height="1043" alt="Разрез скатной крыши: стропила, обрешётка и сплошной слой пенополиуретана между стропилами" fetchpriority="high" decoding="async">
+        <img src="img/hero-attic.jpg" width="637" height="1086" alt="Чердак под скатной крышей: перекрытие утеплено сплошным слоем пенополиуретана" fetchpriority="high" decoding="async">
         <span class="sheen" aria-hidden="true"></span>
         </div></div>
       </figure>
