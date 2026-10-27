@@ -69,6 +69,8 @@
 }
 </script>
 <meta name="theme-color" content="#F4F2FF">
+<link rel="icon" type="image/png" sizes="96x96" href="img/logo-96.png">
+<link rel="apple-touch-icon" href="img/logo-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@500;600;700&family=Inter+Tight:wght@400;500;600&display=swap">
@@ -103,7 +105,7 @@ h1,h2,h3{margin:0;font-family:"Golos Text",system-ui,sans-serif;font-weight:700;
 header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .bar{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .logo{display:flex;align-items:center;gap:10px;font:700 20px "Golos Text",sans-serif;letter-spacing:-.02em;text-decoration:none}
-.logo-mark{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:var(--brand)}
+.logo-mark{display:block;width:44px;height:44px;border-radius:50%}
 .nav{display:flex;gap:30px}
 .nav a{font-size:15px;color:var(--muted);text-decoration:none;font-weight:500}
 .nav a:hover{color:var(--blue)}
@@ -271,7 +273,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 <header>
   <div class="wrap bar">
     <a class="logo" href="#top" aria-label="TEPLO DOM — на главную">
-      <span class="logo-mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12 12 4l9 8"/><path d="M6 11v9h12v-9"/></svg></span>
+      <img class="logo-mark" src="img/logo-96.png" width="44" height="44" alt="">
       TEPLO DOM
     </a>
     <nav class="nav" aria-label="Основная навигация">
